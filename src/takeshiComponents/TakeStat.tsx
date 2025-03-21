@@ -17,7 +17,8 @@ function TakeStat() {
 
     // Djangoから画像を取得するAPIエンドポイント
     const fetchImage = async () => {
-      const response = await fetch('http://192.168.33.11:10000/take-Stat/');
+//      const response = await fetch('http://192.168.33.11:10000/take-Stat/');
+      const response = await fetch('https://dj-dc-ver0-1.onrender.com/take-Stat/');
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
       setImageSrc(url);
