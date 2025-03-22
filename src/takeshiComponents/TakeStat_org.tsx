@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 function TakeStat() {
   //const [message, setMessage] = useState<string>('Loading...');
@@ -13,7 +13,7 @@ function TakeStat() {
   // Djangoから画像を取得するAPIエンドポイント
   const fetchImage = async (val: string) => {
 //  const response = await fetch('http://192.168.33.11:10000/take-Stat/?option=${val}');
-    const response = await fetch(`https://dj-dc-ver0-1.onrender.com/take-Stat/?option=${val}`,{
+    const response = await fetch('https://dj-dc-ver0-1.onrender.com/take-Stat/?option=${val}',{
       method: 'GET'
     });
 
@@ -43,22 +43,23 @@ function TakeStat() {
   return (
     <div>
       <h1>Take★Stat (React + Django)</h1>
-      <div>
-        {/* プルダウンリストを表示 */}
-        <select value={selectedValue} onChange={handleChange}>
-          <option value="">選択してください</option>
-          <option value="1">北海道</option>
-          <option value="2">山梨</option>
-        </select>
-        {/* 送信ボタン */}
-        <button onClick={handleSubmit}>送信</button>
-      </div>
+
+      {/* プルダウンリストを表示 */}
+      <select value={selectedValue} onChange={handleChange}>
+        <option value="">選択してください</option>
+        <option value="option1">オプション1</option>
+        <option value="option2">オプション2</option>
+        <option value="option3">オプション3</option>
+      </select>
+
+      {/* 送信ボタン */}
+      <button onClick={handleSubmit}>送信</button>
 
       {/* 画像が取得されるまで「Loading...」を表示 */}
       {imageSrc ? (
         <img src={imageSrc} alt="Line Chart" />
       ) : (
-        <p>ここにグラフが表示されます</p>
+        <p>Loading...</p>
       )}
     </div>
   );
