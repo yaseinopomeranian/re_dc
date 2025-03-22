@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './TakeStat.css'; 
 
 function TakeStat() {
   //const [message, setMessage] = useState<string>('Loading...');
@@ -41,9 +42,9 @@ function TakeStat() {
   };
 
   return (
-    <div>
-      <h1>Take★Stat (React + Django)</h1>
-      <div>
+    <div className="container">
+      <h1 className="title">Take★Stat (React + Django)</h1>
+      <div className="controls">
         {/* プルダウンリストを表示 */}
         <select value={selectedValue} onChange={handleChange}>
           <option value="">選択してください</option>
@@ -56,9 +57,11 @@ function TakeStat() {
 
       {/* 画像が取得されるまで「Loading...」を表示 */}
       {imageSrc ? (
-        <img src={imageSrc} alt="Line Chart" />
+	<div className="image-container">
+          <img src={imageSrc} alt="Line Chart" />
+	</div>
       ) : (
-        <p>ここにグラフが表示されます</p>
+        <p className="loading">ここにグラフが表示されます</p>
       )}
     </div>
   );

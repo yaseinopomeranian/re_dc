@@ -1,0 +1,90 @@
+/* 全体のスタイル */
+body {
+  font-family: 'Poppins', sans-serif; /* Google Fontsを使って洗練されたフォントを使用 */
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* グラデーション背景 */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* メインコンテナ */
+.container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 影を付けて立体感を出す */
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+}
+
+/* タイトルのスタイル */
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* コントロールエリアのスタイル（プルダウンリストとボタン） */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* プルダウンリストのスタイル */
+.select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+  width: 150px;
+  transition: all 0.3s ease;
+}
+
+.select:hover {
+  border-color: #2575fc; /* ホバー時に色を変更 */
+}
+
+/* 送信ボタンのスタイル */
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #6a11cb; /* ホバー時に色を変更 */
+}
+
+/* 画像表示エリア */
+.image-container {
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 画像に影を追加 */
+}
+
+/* ローディングメッセージのスタイル */
+.loading {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
