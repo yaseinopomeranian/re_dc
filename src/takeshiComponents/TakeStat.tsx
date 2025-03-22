@@ -36,7 +36,7 @@ function TakeStat() {
     if (selectedValue) {
       fetchImage(selectedValue); // 選択した値に基づいて画像を取得
     } else {
-      alert('選択してください');
+      alert('リストから県を選択してください');
     }
   };
 
@@ -51,7 +51,7 @@ function TakeStat() {
           <option value="2">山梨</option>
         </select>
         {/* 送信ボタン */}
-        <button onClick={handleSubmit}>送信</button>
+        <button onClick={handleSubmit}>表示</button>
       </div>
 
       {/* 画像が取得されるまで「Loading...」を表示 */}
