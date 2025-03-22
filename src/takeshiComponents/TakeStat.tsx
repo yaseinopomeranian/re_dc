@@ -1,10 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import './TakeStat.css'; 
 
 function TakeStat() {
   //const [message, setMessage] = useState<string>('Loading...');
   //const [message, setMessage] = useState([]);
 
+  // タブのタイトルを変更
+  useEffect(() => {
+    document.title = "Take★Stat"; // タイトル変更
+  }, []); // 初回レンダリング時にのみ実行される
+ 
   // 画像のURLを格納するためのstate
   const [imageSrc, setImageSrc] = useState<string | null>(null);
 
