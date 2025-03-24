@@ -68,15 +68,15 @@ function TakeStat() {
       </div>
 
       {/* 画像が取得されるまで「Loading...」を表示 */}
-      {isLoading ? (
-        <p className="loading">画像を取得しています...</p>
-      ) : imageSrc ? (
+      {imageSrc ? (<p></p>)
+	        : isLoading ? (<p className="loading">画像取得中...</p>)
+                            : (<p className="loading">こにグラフが表示されます</p>)
+      }
+      {imageSrc &&
         <div className="image-container">
           <img src={imageSrc} alt="Line Chart" />
         </div>
-      ) : (
-        <p className="loading">ここにグラフが表示されます</p>
-      )}
+      }
     </div>
   );
 }
